@@ -101,7 +101,17 @@ describe('Board Types', () => {
         mines: 5 // Plus de mines que de cellules
       };
       
-      expect(() => createBoard(config)).toThrow();
+      expect(() => createBoard(config)).toThrow('Le nombre de mines (5) ne peut pas être supérieur au nombre de cellules (4)');
+    });
+
+    it('should allow mines count equal to cell count', () => {
+      const config: BoardConfig = {
+        rows: 2,
+        cols: 2,
+        mines: 4 // Exactement le même nombre que de cellules
+      };
+      
+      expect(() => createBoard(config)).not.toThrow();
     });
   });
 }); 
