@@ -8,7 +8,11 @@
     "build": "vite build",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json",
-    "postinstall": "patch-package"
+    "postinstall": "patch-package",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest --coverage",
+    "test:mutation": "stryker run"
   },
   "devDependencies": {
     "@stryker-mutator/core": "^8.7.1",
