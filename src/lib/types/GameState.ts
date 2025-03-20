@@ -1,5 +1,3 @@
-import type { BoardConfig } from './Board';
-
 /**
  * Représente les différents états possibles du jeu
  */
@@ -20,13 +18,18 @@ export const Difficulty = {
 } as const;
 
 /**
+ * Type représentant les difficultés disponibles
+ */
+export type DifficultyLevel = typeof Difficulty[keyof typeof Difficulty];
+
+/**
  * Représente l'état du jeu
  */
 export interface GameState {
   status: GameStatus;
   timer: number;
   flagCount: number;
-  difficulty: BoardConfig;
+  difficulty: DifficultyLevel;
   firstClick: boolean;
 }
 
@@ -35,7 +38,7 @@ export interface GameState {
  * @param difficulty La difficulté du jeu (par défaut BEGINNER)
  * @returns Un nouvel état de jeu
  */
-export function createGameState(difficulty = Difficulty.BEGINNER): GameState {
+export function createGameState(difficulty: DifficultyLevel = Difficulty.BEGINNER): GameState {
   return {
     status: GameStatus.READY,
     timer: 0,

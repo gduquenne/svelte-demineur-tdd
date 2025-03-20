@@ -55,7 +55,7 @@ describe('GameState Types', () => {
       expect(gameState.firstClick).toBe(true);
     });
 
-    it('should create a game state with custom difficulty', () => {
+    it('should create a game state with expert difficulty', () => {
       const gameState = createGameState(Difficulty.EXPERT);
       
       expect(gameState.status).toBe(GameStatus.READY);
