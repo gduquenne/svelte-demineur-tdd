@@ -1,47 +1,64 @@
-# Svelte + TS + Vite
+# Démineur en Svelte + TypeScript
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+Ce projet est un jeu de démineur développé avec Svelte 5 et TypeScript, en suivant une approche TDD (Test-Driven Development).
 
-## Recommended IDE Setup
+## Description
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+Le Démineur est un jeu de logique où le joueur doit découvrir toutes les cases sans mines sur une grille. Chaque case révélée affiche un nombre indiquant combien de mines sont adjacentes à cette case.
 
-## Need an official Svelte framework?
+## Fonctionnalités
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+- Différents niveaux de difficulté (débutant, intermédiaire, expert)
+- Premier clic toujours sûr
+- Marquage des mines avec un drapeau
+- Compteur de mines et chronomètre
+- Thème clair/sombre
 
-## Technical considerations
+## Installation
 
-**Why use this over SvelteKit?**
+```bash
+# Cloner le dépôt
+git clone [url-du-depot]
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+# Accéder au répertoire
+cd svelte-demineur-tdd
 
-This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+# Installer les dépendances
+npm install
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
-
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
-
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
-
-**Why include `.vscode/extensions.json`?**
-
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
-
-**Why enable `allowJs` in the TS template?**
-
-While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```ts
-// store.ts
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+# Lancer le serveur de développement
+npm run dev
 ```
+
+## Tests
+
+Ce projet a été développé en suivant l'approche TDD (Test-Driven Development). Pour exécuter les tests :
+
+```bash
+# Exécuter les tests
+npm test
+
+# Exécuter les tests avec couverture
+npm run test:coverage
+```
+
+## Structure du Projet
+
+Le projet suit une structure modulaire pour faciliter la maintenance et les tests :
+
+```
+src/
+├── lib/
+│   ├── components/     # Composants réutilisables
+│   ├── stores/         # Stores Svelte pour la gestion d'état
+│   ├── types/          # Types TypeScript
+│   └── utils/          # Fonctions utilitaires
+└── routes/             # Routes de l'application
+```
+
+## Technologies Utilisées
+
+- Svelte 5
+- TypeScript
+- Vite
+- Vitest
