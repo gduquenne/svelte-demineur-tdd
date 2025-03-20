@@ -32,12 +32,12 @@ src/
 ## Phases de Développement
 
 ### Phase 1 : Mise en Place des Types et Tests de Base
-- [ ] 1. Définir les types de base
+- [x] 1. Définir les types de base
   - [x] `Cell` (état, contenu, position)
   - [x] `Board` (dimensions, grille)
   - [x] `GameState` (état du jeu, score)
-- [ ] 2. Créer les tests unitaires pour les types
-- [ ] 3. Implémenter les types
+- [x] 2. Créer les tests unitaires pour les types
+- [x] 3. Implémenter les types
 
 ### Phase 2 : Logique de Base
 - [ ] 1. Développer la logique de génération de la grille
