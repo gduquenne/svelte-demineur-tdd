@@ -33,7 +33,7 @@ src/
 
 ### Phase 1 : Mise en Place des Types et Tests de Base
 - [ ] 1. Définir les types de base
-  - [ ] `Cell` (état, contenu, position)
+  - [x] `Cell` (état, contenu, position)
   - [ ] `Board` (dimensions, grille)
   - [ ] `GameState` (état du jeu, score)
 - [ ] 2. Créer les tests unitaires pour les types
