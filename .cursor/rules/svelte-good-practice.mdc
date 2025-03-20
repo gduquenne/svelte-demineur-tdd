@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Pour toutes les propositions faites dans des fichiers .svelte, tu dois te baser sur les good practices données par Svelte et sa documentation.
