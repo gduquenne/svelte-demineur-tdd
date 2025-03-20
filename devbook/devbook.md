@@ -35,7 +35,7 @@ src/
 - [ ] 1. Définir les types de base
   - [x] `Cell` (état, contenu, position)
   - [x] `Board` (dimensions, grille)
-  - [ ] `GameState` (état du jeu, score)
+  - [x] `GameState` (état du jeu, score)
 - [ ] 2. Créer les tests unitaires pour les types
 - [ ] 3. Implémenter les types
 
